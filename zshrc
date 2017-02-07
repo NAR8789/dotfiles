@@ -1,36 +1,40 @@
-if [[ ! -d ~/.zplug ]]; then
-  git clone https://github.com/zplug/zplug ~/.zplug
+if [ ! -d ~/.zgen/tarjoilija/zgen-master ]; then
+  mkdir -p ~/.zgen/tarjoilija
+  git clone https://github.com/tarjoilija/zgen.git ~/.zgen/tarjoilija/zgen-master
 fi
-source ~/.zplug/init.zsh
 
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+plugins=(rails)  # for some reason this throws errors if I try to load it as `zgen oh-my-zsh plugin/rails`
+source ~/.zgen/tarjoilija/zgen-master/zgen.zsh
+if ! zgen saved; then
+  echo 'Creating a zgen save'
 
-zplug "robbyrussell/oh-my-zsh", use:"lib/{compfix,completion}.zsh"
-zplug "plugins/git",              from:oh-my-zsh
-zplug "plugins/tig",              from:oh-my-zsh
-zplug "plugins/fasd",             from:oh-my-zsh
-zplug "plugins/last-working-dir", from:oh-my-zsh
-zplug "plugins/dirhistory",       from:oh-my-zsh
-zplug "plugins/dircycle",         from:oh-my-zsh
-zplug "plugins/debian",           from:oh-my-zsh, hook-load:'unalias ag'
-zplug "plugins/screen",           from:oh-my-zsh
-zplug "plugins/vundle",           from:oh-my-zsh
-zplug "plugins/rbenv",            from:oh-my-zsh
-zplug "plugins/bundler",          from:oh-my-zsh
-zplug "plugins/rails",            from:oh-my-zsh
-zplug "plugins/rake-fast",        from:oh-my-zsh
-zplug "plugins/docker",           from:oh-my-zsh
-zplug "plugins/docker-compose",   from:oh-my-zsh
+  zgen load nar8789/oh-my-zsh-preamble
+  zgen oh-my-zsh
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/tig
+  zgen oh-my-zsh plugins/fasd
+  zgen oh-my-zsh plugins/last-working-dir
+  zgen oh-my-zsh plugins/dirhistory
+  zgen oh-my-zsh plugins/dircycle
+  zgen oh-my-zsh plugins/debian
+  zgen oh-my-zsh plugins/screen
+  zgen oh-my-zsh plugins/vundle
+  zgen oh-my-zsh plugins/rbenv
+  zgen oh-my-zsh plugins/bundler
+  zgen oh-my-zsh plugins/rails
+  zgen oh-my-zsh plugins/rake-fast
+  zgen oh-my-zsh plugins/docker
+  zgen oh-my-zsh plugins/docker-compose
 
-zplug "zsh-users/zsh-completions"
-zplug "olivierverdier/zsh-git-prompt", use:zshrc.sh
-zplug "djui/alias-tips"
-zplug "nar8789/selected-oh-my-zsh-libs"
-zplug "nar8789/shell-configs"
-zplug "zsh-users/zsh-autosuggestions",     defer:2
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+  zgen load zsh-users/zsh-completions
+  zgen load olivierverdier/zsh-git-prompt
+  zgen load djui/alias-tips
+  zgen load nar8789/shell-configs
+  zgen load zsh-users/zsh-autosuggestions
+  zgen load zsh-users/zsh-syntax-highlighting
 
-if ! zplug check --verbose; then
-  zplug install
+  zgen save
 fi
-zplug load
+
+# defend ag from oh-my-zsh debian plugin
+unalias ag
