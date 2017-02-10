@@ -29,7 +29,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-completions
   zgen load olivierverdier/zsh-git-prompt
   zgen load djui/alias-tips
-  zgen load nar8789/shell-configs
+  zgen load nar8789/personal-shell-configs
   zgen load zsh-users/zsh-autosuggestions
   zgen load zsh-users/zsh-syntax-highlighting
 
