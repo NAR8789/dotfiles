@@ -9,27 +9,28 @@ if ! zgen saved; then
 
   zgen load nar8789/oh-my-zsh-preamble
   zgen oh-my-zsh
-  zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/tig
-  zgen oh-my-zsh plugins/fasd
-  zgen oh-my-zsh plugins/last-working-dir
-  zgen oh-my-zsh plugins/dirhistory
-  zgen oh-my-zsh plugins/dircycle
-  zgen oh-my-zsh plugins/debian
-  zgen oh-my-zsh plugins/screen
-  zgen oh-my-zsh plugins/vundle
-  zgen oh-my-zsh plugins/rbenv
   zgen oh-my-zsh plugins/bundler
-  zgen oh-my-zsh plugins/rails
-  zgen oh-my-zsh plugins/rake-fast
+  zgen oh-my-zsh plugins/debian
+  zgen oh-my-zsh plugins/dircycle
+  zgen oh-my-zsh plugins/dirhistory
   zgen oh-my-zsh plugins/docker
   zgen oh-my-zsh plugins/docker-compose
+  zgen oh-my-zsh plugins/fasd
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/last-working-dir
+  zgen oh-my-zsh plugins/rails
+  zgen oh-my-zsh plugins/rake-fast
+  zgen oh-my-zsh plugins/rbenv
+  zgen oh-my-zsh plugins/screen
+  zgen oh-my-zsh plugins/tig
+  zgen oh-my-zsh plugins/vundle
 
-  zgen load zsh-users/zsh-completions
-  zgen load olivierverdier/zsh-git-prompt
   zgen load djui/alias-tips
-  zgen load nar8789/shell-secrets
   zgen load nar8789/personal-shell-configs
+  zgen load nar8789/shell-secrets
+  zgen load olivierverdier/zsh-git-prompt
+  zgen load zsh-users/zsh-completions
+
   zgen load zsh-users/zsh-autosuggestions
   zgen load zsh-users/zsh-syntax-highlighting
 
