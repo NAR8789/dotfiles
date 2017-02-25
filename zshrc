@@ -27,6 +27,10 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/tig
   zgen oh-my-zsh plugins/vundle
 
+  if [ -r ~/.zgen_local_loads ]; then
+    . ~/.zgen_local_loads
+  fi
+
   zgen load djui/alias-tips
   zgen load nar8789/kubectl-aliases
   zgen load nar8789/personal-shell-configs
