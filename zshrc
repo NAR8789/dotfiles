@@ -32,8 +32,10 @@ if ! zgen saved; then
   fi
 
   zgen load djui/alias-tips
+  zgen load nar8789/backlight-hack
   zgen load nar8789/kubectl-aliases
   zgen load nar8789/personal-shell-configs
+  zgen load nar8789/screenswap-hack
   zgen load nar8789/shell-secrets
   zgen load olivierverdier/zsh-git-prompt
   zgen load zsh-users/zsh-completions
