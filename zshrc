@@ -48,3 +48,5 @@ fi
 
 # defend ag from oh-my-zsh debian plugin
 unalias ag
+
+setopt histignorealldups
