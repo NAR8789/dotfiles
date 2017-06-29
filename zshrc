@@ -45,8 +45,3 @@ if ! zgen saved; then
 
   zgen save
 fi
-
-# defend ag from oh-my-zsh debian plugin
-unalias ag
-
-setopt histignorealldups
