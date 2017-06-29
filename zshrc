@@ -42,6 +42,7 @@ if ! zgen saved; then
 
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
+  # unfortunately these currently interfere with yank-pop
 
   zgen save
 fi
