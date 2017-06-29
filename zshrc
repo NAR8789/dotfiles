@@ -40,8 +40,8 @@ if ! zgen saved; then
   zgen load olivierverdier/zsh-git-prompt
   zgen load zsh-users/zsh-completions
 
-  zgen load zsh-users/zsh-autosuggestions
-  zgen load zsh-users/zsh-syntax-highlighting
+  # zgen load zsh-users/zsh-autosuggestions
+  # zgen load zsh-users/zsh-syntax-highlighting
 
   zgen save
 fi
