@@ -26,12 +26,14 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/systemd
   zgen oh-my-zsh plugins/tig
   zgen oh-my-zsh plugins/vundle
+  zgen oh-my-zsh plugins/yarn
 
   if [ -r ~/.zgen_local_loads ]; then
     . ~/.zgen_local_loads
   fi
 
   zgen load djui/alias-tips
+  zgen load juliangruber/yarn-aliases
   zgen load nar8789/backlight-hack
   zgen load nar8789/kubectl-aliases
   zgen load nar8789/personal-shell-configs
