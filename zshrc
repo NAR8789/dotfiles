@@ -24,7 +24,6 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/rbenv
   zgen oh-my-zsh plugins/screen
   zgen oh-my-zsh plugins/shrink-path
-  zgen oh-my-zsh plugins/systemd
   zgen oh-my-zsh plugins/tig
   zgen oh-my-zsh plugins/vundle
   zgen oh-my-zsh plugins/yarn
