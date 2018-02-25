@@ -39,9 +39,11 @@ if ! zgen saved; then
   zgen load nar8789/personal-shell-configs
   zgen load nar8789/screenswap-hack
   zgen load nar8789/shell-secrets
+  zgen load nar8789/systemd-aliases
   zgen load olivierverdier/zsh-git-prompt
   zgen load zsh-users/zsh-completions
 
+  # must be loaded last!
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
   # unfortunately these currently interfere with yank-pop
