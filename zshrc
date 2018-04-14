@@ -18,7 +18,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/fasd
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/kubectl
-  zgen oh-my-zsh plugins/last-working-dir
+  # zgen oh-my-zsh plugins/last-working-dir
   zgen oh-my-zsh plugins/rails
   zgen oh-my-zsh plugins/rake-fast
   zgen oh-my-zsh plugins/rbenv
@@ -27,6 +27,8 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/tig
   zgen oh-my-zsh plugins/vundle
   zgen oh-my-zsh plugins/yarn
+
+  zgen oh-my-zsh plugins/asdf # after other version managers, so its paths take precedence
 
   if [ -r ~/.zgen_local_loads ]; then
     . ~/.zgen_local_loads
@@ -50,3 +52,5 @@ if ! zgen saved; then
 
   zgen save
 fi
+
+. ~/.asdf/completions/asdf.bash
