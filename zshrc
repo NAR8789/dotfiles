@@ -57,3 +57,7 @@ if ! zgen saved; then
 fi
 
 . ~/.asdf/completions/asdf.bash
+
+if [ -r ~/.zshrc.local ]; then
+  . ~/.zshrc.local
+fi
