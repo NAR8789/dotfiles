@@ -18,7 +18,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/fasd
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/kubectl
-  # zgen oh-my-zsh plugins/last-working-dir
+  zgen oh-my-zsh plugins/last-working-dir
   zgen oh-my-zsh plugins/rails
   zgen oh-my-zsh plugins/rake-fast
   zgen oh-my-zsh plugins/rbenv
@@ -49,6 +49,9 @@ if ! zgen saved; then
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
   # unfortunately these currently interfere with yank-pop
+
+  # really must be loaded last
+  zgen load nar8789/zsh-intentional-chpwd
 
   zgen save
 fi
