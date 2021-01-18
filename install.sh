@@ -7,3 +7,4 @@ set -x
 ln -srf zshrc ~/.zshrc
 ln -srf vimrc ~/.vimrc
 ln -srf screenrc ~/.screenrc
+ln -srf rc.sh ~/.rc.sh
