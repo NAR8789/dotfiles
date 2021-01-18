@@ -8,4 +8,4 @@ ln -srf zshrc ~/.zshrc
 ln -srf vimrc ~/.vimrc
 ln -srf vimrc ~/.screenrc
 
-ln -srf config/redshift.conf ~/.config/redshift.conf
+ln -srf redshift.conf ~/.config/redshift.conf
