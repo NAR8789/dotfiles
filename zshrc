@@ -2,7 +2,6 @@ if [ ! -d ~/.zgen-master ]; then
   git clone https://github.com/tarjoilija/zgen.git ~/.zgen-master
 fi
 
-plugins=(rails)  # for some reason this throws errors if I try to load it as `zgen oh-my-zsh plugin/rails`
 source ~/.zgen-master/zgen.zsh
 if ! zgen saved; then
   echo 'Creating a zgen save'
