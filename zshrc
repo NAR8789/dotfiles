@@ -44,3 +44,5 @@ if [ -r ~/.zshrc.local ]; then
 fi
 
 alias update-all='sudo -n echo sudo already authenticated; adg; asdf update; asdf plugin-update --all'
+alias xe='autorandr -c external'
+alias xd='autorandr -c dual-single'
