@@ -42,3 +42,5 @@ fi
 if [ -r ~/.zshrc.local ]; then
   . ~/.zshrc.local
 fi
+
+alias update-all='sudo -n echo sudo already authenticated; adg; asdf update; asdf plugin-update --all'
